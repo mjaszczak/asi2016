@@ -1,0 +1,13 @@
+<%- if user_signed_in? %>
+<h1>New Laptop</h1>
+
+<%= render 'form', laptop: @laptop %>
+
+<%= link_to 'Back', laptops_path %>
+<% else %>
+
+<center>
+    <button type="button" class="btn btn-default"><%= link_to 'Login', new_user_session_path %></button>
+</center>
+<% end %>
+
